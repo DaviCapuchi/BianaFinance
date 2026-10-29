@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f6;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fff1ec;
+  --color-surface-container: #ffe9e2;
+  --color-surface-container-high: #ffe2d8;
+  --color-surface-container-highest: #ffdbce;
+
+  --color-primary: #9a4100;
+  --color-primary-container: #bd5611;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #fffbff;
+  --color-primary-fixed: #ffdbcb;
+  --color-on-primary-fixed: #341100;
+
+  --color-secondary: #3b6750;
+  --color-secondary-container: #bdeed0;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #002113;
+
+  --color-tertiary: #805208;
+  --color-tertiary-container: #9c6a23;
+  --color-on-tertiary: #ffffff;
+
+  --color-on-surface: #2a170f;
+  --color-on-surface-variant: #574238;
+  --color-outline: #8a7267;
+  --color-outline-variant: #ddc1b3;
+
+  --color-inverse-surface: #422b22;
+  --color-inverse-on-surface: #ffede7;
+
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: #fff8f6;
+    color: #2a170f;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "tnum";
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Tactile Organic Softness Shadows tinted with Espresso */
+.shadow-tactile {
+  box-shadow: 0 8px 24px -4px rgba(44, 24, 16, 0.05), 0 2px 6px -1px rgba(44, 24, 16, 0.03);
+}
+
+.shadow-tactile-hover:hover {
+  box-shadow: 0 12px 32px -4px rgba(44, 24, 16, 0.08);
+}
+
+.shadow-terracotta {
+  box-shadow: 0 8px 20px -4px rgba(154, 65, 0, 0.35);
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fff8f6;
+}
+::-webkit-scrollbar-thumb {
+  background: #e8dfc8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ddc1b3;
+}
