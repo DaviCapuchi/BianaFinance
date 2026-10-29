@@ -25,4 +25,11 @@ describe('Sidebar Component', () => {
     expect(screen.getByText('Davi')).toBeInTheDocument();
     expect(screen.getByText('Plano Familiar Ativo')).toBeInTheDocument();
   });
+
+  it('has responsive classes to hide on mobile viewports by default', () => {
+    const { container } = render(<Sidebar activeTab="dashboard" />);
+    const aside = container.querySelector('aside');
+    expect(aside?.className).toContain('hidden');
+    expect(aside?.className).toContain('md:flex');
+  });
 });

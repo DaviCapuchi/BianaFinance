@@ -88,37 +88,42 @@ export const StatCard: React.FC<StatCardProps> = ({
       </div>
 
       {/* Footer Info or Progress */}
-      <div className="pt-3 border-t border-[rgba(44,24,16,0.06)] flex items-center justify-between text-xs">
-        {badgeText && (
-          <Badge variant={badgeVariant}>
-            {badgeIcon}
-            <span>{badgeText}</span>
-          </Badge>
-        )}
-
-        {bankInfo && (
-          <span className="text-outline font-medium truncate ml-auto">
-            {bankInfo}
-          </span>
-        )}
-
-        {progressPercentage !== undefined && (
-          <div className="w-full mt-1">
-            <div className="flex justify-between text-xs font-medium text-outline mb-1.5">
-              <span>Meta Mensal</span>
-              <span className="text-secondary font-semibold">
-                {progressPercentage}%
-              </span>
-            </div>
-            <div className="w-full h-2 rounded-full bg-surface-container overflow-hidden">
-              <div
-                className="h-full bg-secondary rounded-full transition-all duration-500"
-                style={{ width: `${Math.min(100, Math.max(0, progressPercentage))}%` }}
-              />
-            </div>
+      {progressPercentage !== undefined ? (
+        <div className="pt-3 border-t border-[rgba(44,24,16,0.06)] flex flex-col gap-2 text-xs">
+          <div className="flex items-center justify-between">
+            <span className="text-outline font-medium">Meta Mensal</span>
+            {badgeText && (
+              <Badge variant={badgeVariant}>
+                {badgeIcon}
+                <span>{badgeText}</span>
+              </Badge>
+            )}
           </div>
-        )}
-      </div>
+          <div className="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+            <div
+              className="h-full bg-secondary rounded-full transition-all duration-500"
+              style={{
+                width: `${Math.min(100, Math.max(0, progressPercentage))}%`,
+              }}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="pt-3 border-t border-[rgba(44,24,16,0.06)] flex items-center justify-between text-xs">
+          {badgeText && (
+            <Badge variant={badgeVariant}>
+              {badgeIcon}
+              <span>{badgeText}</span>
+            </Badge>
+          )}
+
+          {bankInfo && (
+            <span className="text-outline font-medium truncate ml-auto">
+              {bankInfo}
+            </span>
+          )}
+        </div>
+      )}
     </Card>
   );
 };
