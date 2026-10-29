@@ -1,5 +1,5 @@
 import React from 'react';
-import { PasswordStrength } from '../../types/auth';
+import type { PasswordStrength } from '../../types/auth';
 import { cn } from '../../utils/cn';
 
 export interface PasswordStrengthMeterProps {

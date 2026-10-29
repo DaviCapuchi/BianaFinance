@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight, Inbox } from 'lucide-react';
 import { Card } from '../../components/ui/Card';
-import { Transaction, TransactionFilter } from '../../types/finance';
+import type { Transaction, TransactionFilter } from '../../types/finance';
 import { TransactionItem } from './TransactionItem';
 import { cn } from '../../utils/cn';
 

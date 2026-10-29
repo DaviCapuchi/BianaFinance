@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from '../../components/ui/Card';
-import { CategoryExpense } from '../../types/finance';
+import type { CategoryExpense } from '../../types/finance';
 import { formatCurrency } from '../../utils/formatters';
 import { cn } from '../../utils/cn';
 

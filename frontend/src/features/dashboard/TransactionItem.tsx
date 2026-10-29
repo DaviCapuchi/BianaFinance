@@ -9,7 +9,7 @@ import {
   Coffee,
   Receipt,
 } from 'lucide-react';
-import { Transaction, TransactionCategory } from '../../types/finance';
+import type { Transaction } from '../../types/finance';
 import { formatSignedCurrency } from '../../utils/formatters';
 import { cn } from '../../utils/cn';
 

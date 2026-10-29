@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { TransactionList } from './TransactionList';
-import { Transaction } from '../../types/finance';
+import type { Transaction } from '../../types/finance';
 
 const mockTransactions: Transaction[] = [
   {

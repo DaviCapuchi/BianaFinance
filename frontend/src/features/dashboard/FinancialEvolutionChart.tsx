@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
 import { Card } from '../../components/ui/Card';
-import { TimeframeOption } from '../../types/finance';
+import type { TimeframeOption } from '../../types/finance';
 import { cn } from '../../utils/cn';
 
 export interface FinancialEvolutionChartProps {

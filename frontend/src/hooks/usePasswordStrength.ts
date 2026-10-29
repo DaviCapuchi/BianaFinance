@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { PasswordStrength } from '../types/auth';
+import type { PasswordStrength } from '../types/auth';
 
 export function usePasswordStrength(password: string): PasswordStrength {
   return useMemo(() => {

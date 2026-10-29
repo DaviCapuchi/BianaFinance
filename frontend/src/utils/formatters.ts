@@ -1,4 +1,4 @@
-import { TransactionType } from '../types/finance';
+import type { TransactionType } from '../types/finance';
 
 const currencyFormatter = new Intl.NumberFormat('pt-BR', {
   style: 'currency',

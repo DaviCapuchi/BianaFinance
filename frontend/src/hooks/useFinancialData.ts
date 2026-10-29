@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from 'react';
-import {
+import type {
   Transaction,
   TransactionFilter,
   TimeframeOption,
