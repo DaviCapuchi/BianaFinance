@@ -5,12 +5,16 @@ import {
   BarChart3,
   PiggyBank,
   Settings,
-  Sparkles,
   LogOut,
+  X,
 } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import logoImg from '../../assets/Logo.webp';
 
 export interface SidebarProps {
+  isOpen?: boolean;
+  isCollapsed?: boolean;
+  onClose?: () => void;
   activeTab?: string;
   onTabChange?: (tab: string) => void;
   onLogout?: () => void;
@@ -31,6 +35,9 @@ const NAV_ITEMS = [
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({
+  isOpen,
+  isCollapsed = false,
+  onClose,
   activeTab = 'dashboard',
   onTabChange,
   onLogout,
@@ -41,53 +48,88 @@ export const Sidebar: React.FC<SidebarProps> = ({
   },
 }) => {
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest border-r border-[rgba(44,24,16,0.06)] hidden md:flex flex-col justify-between p-6 z-40 select-none">
-      {/* Top Header / Branding */}
-      <div>
-        <div className="flex items-center gap-3 px-2 py-3 mb-8">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-terracotta">
-            <Sparkles className="w-5 h-5" />
-          </div>
-          <div>
-            <h1 className="font-bold text-base text-on-surface tracking-tight leading-tight">
-              Harmonia Finanças
-            </h1>
-            <p className="text-xs text-outline font-medium">Biana Finance</p>
-          </div>
-        </div>
+    <>
+      {/* Mobile Drawer Overlay Backdrop */}
+      {isOpen && (
+        <div
+          data-testid="sidebar-backdrop"
+          className="fixed inset-0 bg-black/40 backdrop-blur-xs z-40 md:hidden animate-fade-in"
+          onClick={onClose}
+          aria-label="Fechar menu lateral"
+        />
+      )}
 
-        {/* Navigation Items */}
-        <nav className="space-y-1.5" aria-label="Navegação Principal">
-          {NAV_ITEMS.map((item) => {
-            const Icon = item.icon;
-            const isActive =
-              activeTab.toLowerCase() === item.id.toLowerCase() ||
-              activeTab.toLowerCase() === item.label.toLowerCase();
+      <aside
+        className={cn(
+          'fixed left-0 top-0 bottom-0 w-72 bg-surface-container-lowest border-r border-[rgba(44,24,16,0.06)] flex-col justify-between p-6 z-50 select-none transition-all duration-300',
+          isOpen ? 'flex shadow-2xl md:shadow-none' : 'hidden md:flex',
+          isCollapsed && 'md:hidden'
+        )}
+      >
+        {/* Top Header / Branding */}
+        <div>
+          <div className="flex items-center justify-between gap-3 px-2 py-3 mb-8">
+            <div className="flex items-center gap-3">
+              <img
+                src={logoImg}
+                alt="Biana Finanças"
+                className="w-10 h-10 rounded-xl object-cover shadow-tactile shrink-0 border border-[rgba(44,24,16,0.08)]"
+              />
+              <div>
+                <h1 className="font-bold text-base text-on-surface tracking-tight leading-tight">
+                  Biana Finanças
+                </h1>
+                <p className="text-xs text-outline font-medium">Gestão Consiciente</p>
+              </div>
+            </div>
 
-            return (
+            {onClose && (
               <button
-                key={item.id}
                 type="button"
-                onClick={() => onTabChange?.(item.id)}
-                className={cn(
-                  'w-full flex items-center gap-3.5 px-3.5 py-3 rounded-xl text-sm font-medium transition-all duration-150 cursor-pointer text-left',
-                  isActive
-                    ? 'bg-surface-container text-primary font-semibold shadow-xs'
-                    : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
-                )}
+                onClick={onClose}
+                aria-label="Fechar barra lateral"
+                className="md:hidden p-1.5 -mr-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors cursor-pointer"
               >
-                <Icon
-                  className={cn(
-                    'w-5 h-5 shrink-0 transition-colors',
-                    isActive ? 'text-primary' : 'text-outline'
-                  )}
-                />
-                <span>{item.label}</span>
+                <X className="w-5 h-5" />
               </button>
-            );
-          })}
-        </nav>
-      </div>
+            )}
+          </div>
+
+          {/* Navigation Items */}
+          <nav className="space-y-1.5" aria-label="Navegação Principal">
+            {NAV_ITEMS.map((item) => {
+              const Icon = item.icon;
+              const isActive =
+                activeTab.toLowerCase() === item.id.toLowerCase() ||
+                activeTab.toLowerCase() === item.label.toLowerCase();
+
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => {
+                    onTabChange?.(item.id);
+                    onClose?.();
+                  }}
+                  className={cn(
+                    'w-full flex items-center gap-3.5 px-3.5 py-3 rounded-xl text-sm font-medium transition-all duration-150 cursor-pointer text-left',
+                    isActive
+                      ? 'bg-surface-container text-primary font-semibold shadow-xs'
+                      : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface'
+                  )}
+                >
+                  <Icon
+                    className={cn(
+                      'w-5 h-5 shrink-0 transition-colors',
+                      isActive ? 'text-primary' : 'text-outline'
+                    )}
+                  />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+          </nav>
+        </div>
 
       {/* User Anchor Footer */}
       <div className="pt-4 border-t border-[rgba(44,24,16,0.06)]">
@@ -127,5 +169,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
     </aside>
+    </>
   );
 };

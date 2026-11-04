@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Wallet, ArrowDownLeft, ArrowUpRight } from 'lucide-react';
-import { Sidebar } from '../features/dashboard/Sidebar';
-import { DashboardTopNav } from '../features/dashboard/DashboardTopNav';
+import { DashboardLayout } from '../features/dashboard/DashboardLayout';
 import { DashboardHeader } from '../features/dashboard/DashboardHeader';
 import { StatCard } from '../features/dashboard/StatCard';
 import { FinancialEvolutionChart } from '../features/dashboard/FinancialEvolutionChart';
@@ -14,11 +13,13 @@ import { formatCurrency } from '../utils/formatters';
 export interface DashboardPageProps {
   onLogout?: () => void;
   userName?: string;
+  onNavigateTab?: (tab: string) => void;
 }
 
 export const DashboardPage: React.FC<DashboardPageProps> = ({
   onLogout,
   userName = 'Davi',
+  onNavigateTab,
 }) => {
   const {
     filteredTransactions,
@@ -36,24 +37,16 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-surface flex text-on-surface">
-      {/* Fixed Desktop Sidebar */}
-      <Sidebar
+    <>
+      <DashboardLayout
         activeTab="dashboard"
+        onNavigateTab={onNavigateTab}
         onLogout={onLogout}
-        user={{ name: userName, plan: 'Plano Familiar Ativo' }}
-      />
-
-      {/* Main Container offset by sidebar width (w-72 = 18rem) */}
-      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
-        {/* Sticky Top Navigation */}
-        <DashboardTopNav
-          periodLabel={period}
-          onPeriodChange={setPeriod}
-          onOpenNewTransaction={() => setIsModalOpen(true)}
-          user={{ name: userName }}
-        />
-
+        userName={userName}
+        periodLabel={period}
+        onPeriodChange={setPeriod}
+        onOpenNewTransaction={() => setIsModalOpen(true)}
+      >
         {/* Content Body */}
         <main className="p-4 sm:p-6 lg:p-8 space-y-6 max-w-7xl w-full mx-auto">
           {/* Header Greeting & Controls */}
@@ -124,7 +117,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             />
           </section>
         </main>
-      </div>
+      </DashboardLayout>
 
       {/* New Transaction Modal */}
       <NewTransactionModal
@@ -132,6 +125,6 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
         onClose={() => setIsModalOpen(false)}
         onSubmit={addTransaction}
       />
-    </div>
+    </>
   );
 };

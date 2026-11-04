@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR" style=""><head></head><body class="bg-main-atmosphere min-h-screen text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Biana Finanças - A nova era da tranquilidade financeira</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-fixed-variant": "#234f3a",
+            "tertiary-fixed": "#ffddb6",
+            "primary-fixed": "#ffdbcb",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#2a170f",
+            "on-secondary": "#ffffff",
+            "surface-container-highest": "#ffdbce",
+            "inverse-surface": "#422b22",
+            "tertiary": "#805208",
+            "on-tertiary-container": "#fffbff",
+            "outline": "#8a7267",
+            "on-secondary-fixed": "#002113",
+            "secondary-container": "#bdeed0",
+            "on-tertiary-fixed": "#2a1800",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#783100",
+            "background": "#fff8f6",
+            "inverse-on-surface": "#ffede7",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#ffb690",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#f8bb6c",
+            "on-primary-container": "#fffbff",
+            "on-secondary-container": "#416d56",
+            "surface-container-high": "#ffe2d8",
+            "surface-dim": "#f8d2c4",
+            "on-tertiary-fixed-variant": "#643f00",
+            "tertiary-container": "#9c6a23",
+            "secondary": "#2e7d56",
+            "on-background": "#2a170f",
+            "outline-variant": "#ddc1b3",
+            "surface-bright": "#fff8f6",
+            "secondary-fixed-dim": "#a2d1b5",
+            "surface-variant": "#ffdbce",
+            "surface-tint": "#9e4300",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "surface": "#fff8f6",
+            "surface-container-low": "#fff1ec",
+            "surface-container": "#ffe9e2",
+            "on-surface-variant": "#574238",
+            "primary-container": "#bd5611",
+            "primary-fixed-dim": "#ffb690",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#341100",
+            "secondary-fixed": "#bdeed0",
+            "primary": "#9a4100"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-desktop": "3rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "gutter": "1.25rem",
+            "margin-tablet": "2rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "gutter-desktop": "1.75rem"
+          },
+          "fontFamily": {
+            "display-hero": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-numeric-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-xl-mobile": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+            "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-numeric-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    
+    .bg-main-atmosphere {
+      background: radial-gradient(circle at 15% 15%, rgba(249, 115, 22, 0.08) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 25%, rgba(46, 125, 86, 0.07) 0%, transparent 50%),
+                  radial-gradient(circle at 50% 85%, rgba(189, 86, 17, 0.05) 0%, transparent 55%),
+                  linear-gradient(180deg, #fff8f6 0%, #fff1ec 50%, #fff8f6 100%);
+    }
+
+    /* Interactive 3D Perspective Wrappers */
+    .tilt-wrapper {
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+
+    .tilt-inner {
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0.2, 1), box-shadow 0.35s ease;
+      will-change: transform;
+    }
+
+    /* Scroll Lift & Staggered Reveal Animation Effects */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Micro-interaction Button Styles */
+    .interactive-btn {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    }
+
+    .interactive-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      pointer-events: none;
+      transition: none;
+    }
+
+    .interactive-btn:hover::after {
+      left: 140%;
+      transition: left 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .interactive-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .interactive-btn:active {
+      transform: translateY(0px) scale(0.97);
+    }
+
+    /* Arrow bounce on button hover */
+    .btn-arrow-bounce {
+      display: inline-block;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .interactive-btn:hover .btn-arrow-bounce {
+      transform: translateX(4px);
+    }
+
+    /* Header Nav Links Interactive Hover Slide Underline */
+    .nav-link-anim {
+      position: relative;
+    }
+    .nav-link-anim::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #9a4100;
+      border-radius: 9999px;
+      transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-link-anim:hover::after {
+      width: 100%;
+    }
+
+    /* Pulsing Beacon / Radar Animation for Graph endpoint and Badges */
+    @keyframes radar-pulse {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.85;
+      }
+      70% {
+        transform: scale(2.6);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(2.8);
+        opacity: 0;
+      }
+    }
+    .radar-ring {
+      animation: radar-pulse 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      transform-origin: center;
+    }
+
+    /* Gentle Floating Animation for Top Badge */
+    @keyframes gentle-float {
+      0%, 100% {
+        transform: translateY(0px);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      }
+      50% {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(154, 65, 0, 0.08);
+      }
+    }
+    .animate-badge-float {
+      animation: gentle-float 4s ease-in-out infinite;
+    }
+
+    /* SVG Stroke Draw Animation */
+    .chart-draw-line {
+      stroke-dasharray: 600;
+      stroke-dashoffset: 600;
+      transition: stroke-dashoffset 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .chart-draw-line.animate-draw {
+      stroke-dashoffset: 0;
+    }
+
+    .chart-fill-fade {
+      opacity: 0;
+      transition: opacity 1.4s ease 0.6s;
+    }
+    .chart-fill-fade.animate-fade {
+      opacity: 1;
+    }
+
+    .chart-point {
+      opacity: 0;
+      transform-origin: center;
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform: scale(0);
+    }
+    .chart-point.animate-point {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Card Micro-interactions on Feature Cards */
+    .feature-card {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px -8px rgba(154, 65, 0, 0.12), 0 4px 12px rgba(42, 23, 15, 0.04);
+      border-color: rgba(154, 65, 0, 0.35);
+    }
+    .feature-card:hover .icon-box {
+      transform: scale(1.1) rotate(-4deg);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .icon-box {
+      transition: transform 0.3s ease;
+    }
+
+    /* Graph stat tiles micro-interaction */
+    .metric-interactive-tile {
+      transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    }
+    .metric-interactive-tile:hover {
+      transform: translateY(-2px);
+      background-color: #ffe9e2;
+      border-color: rgba(154, 65, 0, 0.35);
+    }
+
+    /* Ripple Click Effect */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.45);
+      transform: scale(0);
+      animation: ripple-anim 0.6s linear;
+      pointer-events: none;
+    }
+    @keyframes ripple-anim {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-item,
+      .tilt-inner,
+      .interactive-btn,
+      .feature-card,
+      .metric-interactive-tile,
+      .chart-draw-line,
+      .chart-fill-fade,
+      .chart-point {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+        animation: none !important;
+      }
+      .chart-draw-line {
+        stroke-dashoffset: 0 !important;
+      }
+      .radar-ring {
+        display: none !important;
+      }
+    }
+  </style>
+<!-- Atmospheric Ambient Background Subtle Accents -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-[120px]"></div>
+<div class="absolute top-1/4 -right-32 w-[32rem] h-[32rem] rounded-full bg-secondary/10 blur-[130px]"></div>
+<div class="absolute bottom-10 left-1/3 w-[28rem] h-[28rem] rounded-full bg-primary-container/8 blur-[140px]"></div>
+</div>
+<div class="relative z-10 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="docked full-width top sticky z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/50 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-6 md:px-12 max-w-7xl mx-auto h-20">
+<!-- Brand Lockup -->
+<a class="flex items-center gap-3.5 group transition-transform duration-200 active:scale-[0.98]" href="#">
+<div class="w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center p-0.5 bg-surface-container-low border border-outline-variant/60 shadow-sm group-hover:scale-105 group-hover:border-primary/40 transition-all duration-300">
+<img alt="Biana Finanças Brand Icon" class="w-full h-full object-contain filter drop-shadow-sm group-hover:rotate-6 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEt949sWfL7FLCfOnjvQIUcMuORpxZfTEBSahIX4RgpSPt5oEaNHGCxF4tQv3lFXfzwrkYNXxoQaUwgkk-QjLw30jbvJILaavDWCdvl2aG1l2pflmnrOquwPQZ52S1z57yKY59HoGncs_W6uhdTFKX6HtntKhLdNiE3tIH4a4E62Nac4RyldFM4LyZj6tJdFv_Bv4TwGsRdIQLU7Ib2stEWy4-TyC5hGXWPUyvqhPCOAqtXS_gKB37Qw"/>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight group-hover:text-primary transition-colors">
+              Biana Finanças
+            </span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold tracking-widest uppercase">Gestão de Patrimônio</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="nav-link-anim text-label-md font-label-md text-primary font-bold hover:text-primary transition-colors duration-200" href="#solucoes">
+            Soluções
+          </a>
+<a class="nav-link-anim text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#recursos">
+            Recursos
+          </a>
+<a class="nav-link-anim text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#seguranca">
+            Segurança
+          </a>
+<a class="nav-link-anim text-label-md font-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#precos">
+            Preços
+          </a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="interactive-btn text-label-md font-label-md text-on-surface font-semibold px-4 py-2 rounded-lg hover:text-primary hover:bg-surface-container-low transition-all duration-200">
+            Entrar
+          </button>
+<button class="interactive-btn text-label-md font-label-md text-on-primary bg-gradient-to-r from-primary to-primary-container font-semibold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+            Criar conta
+          </button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center">
+<!-- Top Intro Pill & Headline -->
+<section class="w-full max-w-6xl mx-auto px-6 pt-12 md:pt-16 pb-6 text-center flex flex-col items-center">
+<div class="reveal-item is-visible inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/60 shadow-sm mb-6 animate-badge-float cursor-default transition-all hover:border-secondary/60">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-label-md font-label-md text-on-surface-variant font-medium">A nova era da tranquilidade financeira</span>
+</div>
+<h1 class="reveal-item is-visible text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface max-w-4xl tracking-tight leading-tight font-extrabold transition-all" style="transition-delay: 100ms;">
+          Aqui o seu dinheiro se organiza.
+        </h1>
+<p class="reveal-item is-visible text-body-md md:text-body-lg font-body-lg text-on-surface-variant max-w-2xl mt-4 leading-relaxed transition-all" style="transition-delay: 200ms;">
+          Menos atrito, zero complicação. O controle total da sua vida financeira em uma única tela.
+        </p>
+</section>
+<!-- Wireframe Reorganized Presentation Section: Compact Graph on Left, Target Copy & CTA on Right with Scroll Lift & 3D Interactive Parallax Tilt -->
+<section class="w-full max-w-6xl mx-auto px-6 py-8 md:py-14" id="interactive-presentation">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+<!-- Left Column: Compact Financial Flow Graph Card (3D Tilt & Interactive Data) -->
+<div class="lg:col-span-6 w-full flex justify-center tilt-wrapper">
+<div class="tilt-inner w-full max-w-lg rounded-2xl bg-surface-container-lowest border border-outline-variant/50 p-5 md:p-6 shadow-[0_12px_32px_-6px_rgba(42,23,15,0.08)] relative overflow-hidden group cursor-crosshair" id="chart-card">
+<!-- Subtle Top Edge Highlight -->
+<div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-container/20 to-transparent"></div>
+<!-- Card Header & Status -->
+<div class="flex items-center justify-between pb-4 gap-2 border-b border-outline-variant/30">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant/40 text-primary group-hover:scale-105 group-hover:bg-primary-fixed transition-all duration-300">
+<span class="material-symbols-outlined text-[18px]" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<h3 class="text-body-md font-bold text-on-surface leading-tight">Fluxo em tempo real</h3>
+<p class="text-[11px] text-on-surface-variant">Ativos atualizados ao vivo</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/50 border border-secondary/30 text-label-sm font-label-sm text-secondary font-bold hover:bg-secondary-container transition-colors">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-secondary"></span>
+</span>
+<span class="metric-counter" data-decimals="2" data-prefix="+R$ " data-target="4250">+R$ 4.250,00</span>
+</div>
+</div>
+<!-- Compact Chart Visual matching sketch curves -->
+<div class="w-full pt-4 pb-2 relative">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant px-1 pb-1">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1 text-[12px] text-secondary font-semibold hover:text-secondary-fixed-dim transition-colors cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Entradas
+</span>
+<span class="flex items-center gap-1 text-[12px] text-outline font-medium hover:text-on-surface transition-colors cursor-pointer">
+<span class="w-2 h-2 rounded-full bg-outline"></span> Saídas
+</span>
+</div>
+<span class="text-[10px] tracking-wider text-outline uppercase font-semibold hover:text-primary transition-colors">Outubro 2026</span>
+</div>
+<!-- SVG Chart with Animation & Interactive Nodes -->
+<div class="w-full h-44 relative mt-1" id="chart-svg-container">
+<!-- Floating Tooltip for Graph Interactive Hover -->
+<div class="absolute opacity-0 pointer-events-none z-20 px-2 py-1 bg-inverse-surface text-inverse-on-surface text-[11px] rounded shadow-lg transform -translate-x-1/2 -translate-y-full transition-all duration-200 whitespace-nowrap" id="graph-tooltip">
+  +R$ 4.250,00
+</div>
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 500 160">
+<defs>
+<lineargradient id="emeraldFillCompact" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#2e7d56" stop-opacity="0.32"></stop>
+<stop offset="70%" stop-color="#bdeed0" stop-opacity="0.10"></stop>
+<stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+</lineargradient>
+<filter height="160%" id="glowGreenCompact" width="160%" x="-30%" y="-30%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<!-- Gridlines -->
+<line stroke="#ddc1b3" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="500" y1="20" y2="20"></line>
+<line stroke="#ddc1b3" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="500" y1="70" y2="70"></line>
+<line stroke="#ddc1b3" stroke-dasharray="3 3" stroke-opacity="0.35" x1="0" x2="500" y1="120" y2="120"></line>
+<!-- Saídas Baseline Path -->
+<path d="M 0,118 C 90,122 170,110 260,116 C 350,122 420,112 500,116" fill="none" stroke="#8a7267" stroke-dasharray="5 3" stroke-opacity="0.7" stroke-width="2"></path>
+<!-- Entradas Gradient Area Fill -->
+<path class="chart-fill-fade" d="M 0,105 C 100,100 170,68 280,60 C 370,52 440,28 500,16 L 500,150 L 0,150 Z" fill="url(#emeraldFillCompact)"></path>
+<!-- Entradas Path (Vibrant Emerald Curve with Draw Animation) -->
+<path class="chart-draw-line" d="M 0,105 C 100,100 170,68 280,60 C 370,52 440,28 500,16" fill="none" filter="url(#glowGreenCompact)" id="trend-line" stroke="#2e7d56" stroke-width="3.5"></path>
+<!-- Data Points with Interactive Hover Tooltips and Pop Animations -->
+<g class="chart-point-group" data-val="+R$ 1.800" data-x="140" data-y="80">
+<circle class="chart-point" cx="140" cy="80" fill="#2e7d56" r="4.5" stroke="#ffffff" stroke-width="2.5" style="transition-delay: 600ms;"></circle>
+</g>
+<g class="chart-point-group" data-val="+R$ 3.100" data-x="280" data-y="60">
+<circle class="chart-point" cx="280" cy="60" fill="#2e7d56" r="4.5" stroke="#ffffff" stroke-width="2.5" style="transition-delay: 900ms;"></circle>
+</g>
+<g class="chart-point-group" data-val="+R$ 4.850" data-x="420" data-y="30">
+<circle class="chart-point" cx="420" cy="30" fill="#2e7d56" r="4.5" stroke="#ffffff" stroke-width="2.5" style="transition-delay: 1200ms;"></circle>
+</g>
+<!-- Final Endpoint with Pulsing Radar Beacon -->
+<g class="chart-point-group" data-val="+R$ 6.000 (Meta superada!)" data-x="500" data-y="16">
+<circle class="radar-ring" cx="500" cy="16" fill="none" r="7" stroke="#2e7d56" stroke-width="2"></circle>
+<circle class="chart-point" cx="500" cy="16" fill="#2e7d56" r="6" stroke="#ffffff" stroke-width="2" style="transition-delay: 1500ms;"></circle>
+</g>
+</svg>
+</div>
+<!-- X-Axis Labels with Hover Highlight -->
+<div class="flex justify-between items-center text-[10px] text-outline pt-1 px-1 font-medium select-none">
+<span class="hover:text-primary hover:font-bold transition-all cursor-pointer">01 Out</span>
+<span class="hover:text-primary hover:font-bold transition-all cursor-pointer">10 Out</span>
+<span class="hover:text-primary hover:font-bold transition-all cursor-pointer">20 Out</span>
+<span class="hover:text-primary hover:font-bold transition-all cursor-pointer">31 Out</span>
+</div>
+</div>
+<!-- Compact Metric Tiles with Smooth Interactive Hover and Counters -->
+<div class="grid grid-cols-3 gap-2.5 pt-4 border-t border-outline-variant/30">
+<div class="metric-interactive-tile rounded-lg bg-surface-container-low border border-outline-variant/40 p-2.5 cursor-pointer">
+<span class="text-[10px] uppercase font-semibold text-on-surface-variant block">Entradas</span>
+<span class="metric-counter text-[14px] font-bold text-secondary mt-0.5 block leading-tight" data-prefix="+R$ " data-target="6000">+R$ 6.000</span>
+</div>
+<div class="metric-interactive-tile rounded-lg bg-surface-container-low border border-outline-variant/40 p-2.5 cursor-pointer">
+<span class="text-[10px] uppercase font-semibold text-on-surface-variant block">Saídas</span>
+<span class="metric-counter text-[14px] font-bold text-on-surface mt-0.5 block leading-tight" data-prefix="-R$ " data-target="1750">-R$ 1.750</span>
+</div>
+<div class="metric-interactive-tile rounded-lg bg-surface-container-low border border-outline-variant/40 p-2.5 cursor-pointer">
+<span class="text-[10px] uppercase font-semibold text-on-surface-variant block">Economia</span>
+<span class="metric-counter text-[14px] font-bold text-primary mt-0.5 block leading-tight" data-decimals="1" data-suffix="%" data-target="70.8">70,8%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Wireframe Hero Copy & CTA (Reveals on scroll) -->
+<div class="lg:col-span-6 flex flex-col justify-center text-left pl-0 lg:pl-4">
+<div class="reveal-item flex flex-col items-start is-visible" id="reveal-copy">
+<!-- Wireframe Exact Headline: "Um parceiro pra vida toda" -->
+<h2 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl text-on-surface font-extrabold tracking-tight leading-snug">Um parceiro pra vida toda</h2>
+<!-- Wireframe Exact Subtitle -->
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-4 leading-relaxed font-normal"><span style="letter-spacing: -0.08px; text-align: center;">Desenvolvido para descomplicar seu patrimônio com entendimento fácil e aprendizado rápido. Visualize para onde vai cada centavo sem precisar de planilhas complexas.</span></p>
+<!-- Wireframe CTA Button: "começar agora" with Magnetic / Shimmer / Ripple -->
+<div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<button class="interactive-btn px-8 py-3.5 rounded-full text-on-primary bg-gradient-to-r from-primary to-primary-container font-semibold text-body-md shadow-[0_8px_24px_rgba(154,65,0,0.26)] hover:shadow-[0_12px_28px_rgba(154,65,0,0.36)] inline-flex items-center gap-2.5 group">
+<span class="">começar agora</span>
+<span class="btn-arrow-bounce text-primary-fixed font-bold text-base">→</span>
+</button>
+<span class="text-body-sm text-outline flex items-center gap-1.5 transition-colors hover:text-on-surface cursor-default">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+Sem taxas de ativação
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Supporting Feature Highlights / Bento Micro-Pillars (Staggered Scroll Entrance & 3D Tilt) -->
+<section class="w-full max-w-5xl mx-auto px-6 py-12 md:py-16 text-center flex flex-col items-center">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full text-left" id="pillars-container">
+<!-- Pillar 1 -->
+<div class="reveal-item feature-card rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-6 flex flex-col justify-between shadow-[0_4px_16px_rgba(42,23,15,0.04)] cursor-pointer" style="transition-delay: 100ms;">
+<div class="icon-box w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-5 border border-primary/20 shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="table_chart_view">table_chart_view</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Sem planilhas manuais</h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Categorização autônoma de fluxos bancários sem a necessidade de preenchimento de tabelas intermináveis.
+              </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="reveal-item feature-card rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-6 flex flex-col justify-between shadow-[0_4px_16px_rgba(42,23,15,0.04)] cursor-pointer" style="transition-delay: 250ms;">
+<div class="icon-box w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-secondary mb-5 border border-secondary/20 shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Segurança nível bancário</h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Criptografia end-to-end e arquitetura zero-knowledge projetadas para investidores institucionais e alta convicção.
+              </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="reveal-item feature-card rounded-xl bg-surface-container-lowest border border-outline-variant/50 p-6 flex flex-col justify-between shadow-[0_4px_16px_rgba(42,23,15,0.04)] cursor-pointer" style="transition-delay: 400ms;">
+<div class="icon-box w-12 h-12 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary mb-5 border border-tertiary/20 shadow-sm">
+<span class="material-symbols-outlined text-[24px]" data-icon="speed">speed</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm font-bold text-on-surface mb-2">Clareza em segundos</h3>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Diagnósticos limpos e visuais intuitivos que mostram com clareza instantânea a liquidez real disponível.
+              </p>
+</div>
+</div>
+</div>
+<!-- Secondary CTA button -->
+<div class="mt-12 text-center reveal-item" style="transition-delay: 300ms;">
+<button class="interactive-btn px-8 py-3.5 rounded-full text-on-primary bg-gradient-to-r from-primary to-primary-container font-semibold shadow-[0_6px_20px_rgba(154,65,0,0.25)] hover:shadow-[0_8px_26px_rgba(154,65,0,0.35)] inline-flex items-center gap-2 group">
+<span class="">começar agora</span>
+<span class="btn-arrow-bounce text-primary-fixed font-bold text-base">→</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer with Wireframe "Termos e privacidade" -->
+<footer class="docked full-width bottom bg-surface-container-lowest border-t border-outline-variant/40">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-8 max-w-7xl mx-auto gap-4">
+<!-- Copyright Text -->
+<p class="text-body-sm font-body-sm text-on-surface-variant text-center md:text-left">
+          © 2025 Biana Finanças. Todos os direitos reservados.
+        </p>
+<!-- Minimal Navigation Links with prominent "Termos e privacidade" from sketch -->
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="nav-link-anim text-label-md font-label-md text-on-surface hover:text-primary font-semibold transition-colors duration-200 underline decoration-outline-variant hover:decoration-primary" href="#termos-e-privacidade">
+            Termos e privacidade
+          </a>
+<a class="nav-link-anim text-label-sm font-label-sm text-on-surface-variant hover:text-primary font-medium transition-colors duration-200" href="#seguranca">
+            Segurança
+          </a>
+<a class="nav-link-anim text-label-sm font-label-sm text-on-surface-variant hover:text-primary font-medium transition-colors duration-200" href="#contato">
+            Contato
+          </a>
+<a class="nav-link-anim text-label-sm font-label-sm text-on-surface-variant hover:text-primary font-medium transition-colors duration-200" href="#status">
+            Status
+          </a>
+</div>
+</div>
+</footer>
+</div>
+<!-- Complete Interactive Animation Suite (Vanilla JS) -->
+<script>
+  (function() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const chartCard = document.getElementById('chart-card');
+    const presentationSection = document.getElementById('interactive-presentation');
+    const trendLine = document.getElementById('trend-line');
+    const fillArea = document.querySelector('.chart-fill-fade');
+    const chartPoints = document.querySelectorAll('.chart-point');
+    const revealItems = document.querySelectorAll('.reveal-item');
+    const interactiveBtns = document.querySelectorAll('.interactive-btn');
+
+    // 1. Ripple Micro-Interaction on All Buttons
+    interactiveBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const rect = btn.getBoundingClientRect();
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        const diameter = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = `${diameter}px`;
+        ripple.style.left = `${e.clientX - rect.left - diameter / 2}px`;
+        ripple.style.top = `${e.clientY - rect.top - diameter / 2}px`;
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // 2. Smooth 3D Parallax Tilt Effect on Graph Card and Feature Cards
+    if (!prefersReducedMotion && chartCard) {
+      const cardParent = chartCard.parentElement;
+      cardParent.addEventListener('mousemove', function(e) {
+        const rect = cardParent.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -7;
+        const rotateY = ((x - centerX) / centerX) * 7;
+
+        chartCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      });
+
+      cardParent.addEventListener('mouseleave', function() {
+        chartCard.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+      });
+    }
+
+    // 3. Staggered Entrance & Reveal Observer
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealItems.forEach(el => revealObserver.observe(el));
+    } else {
+      revealItems.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // 4. SVG Chart Draw & Number Counter Animation when Hero enters view
+    let chartAnimated = false;
+    function triggerChartAnimation() {
+      if (chartAnimated) return;
+      chartAnimated = true;
+
+      // Draw SVG Line & Area Fill
+      if (trendLine) trendLine.classList.add('animate-draw');
+      if (fillArea) fillArea.classList.add('animate-fade');
+      chartPoints.forEach(pt => pt.classList.add('animate-point'));
+
+      // Count Up Metrics
+      const counterElements = document.querySelectorAll('.metric-counter');
+      counterElements.forEach(el => {
+        const target = parseFloat(el.getAttribute('data-target') || '0');
+        const prefix = el.getAttribute('data-prefix') || '';
+        const suffix = el.getAttribute('data-suffix') || '';
+        const decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+        const duration = 1600;
+        const startTime = performance.now();
+
+        function updateCounter(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease-out cubic
+          const easeOut = 1 - Math.pow(1 - progress, 3);
+          const currentVal = target * easeOut;
+
+          let formattedNum;
+          if (decimals > 0) {
+            formattedNum = currentVal.toLocaleString('pt-BR', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+          } else {
+            formattedNum = Math.floor(currentVal).toLocaleString('pt-BR');
+          }
+
+          el.textContent = `${prefix}${formattedNum}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            if (decimals > 0) {
+              el.textContent = `${prefix}${target.toLocaleString('pt-BR', { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}${suffix}`;
+            } else {
+              el.textContent = `${prefix}${target.toLocaleString('pt-BR')}${suffix}`;
+            }
+          }
+        }
+        requestAnimationFrame(updateCounter);
+      });
+    }
+
+    if (!prefersReducedMotion && 'IntersectionObserver' in window && presentationSection) {
+      const chartObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            triggerChartAnimation();
+          }
+        });
+      }, { threshold: 0.2 });
+      chartObserver.observe(presentationSection);
+    } else {
+      triggerChartAnimation();
+    }
+
+    // 5. Interactive Chart Tooltip on Node Hover
+    const tooltip = document.getElementById('graph-tooltip');
+    const pointGroups = document.querySelectorAll('.chart-point-group');
+    const svgContainer = document.getElementById('chart-svg-container');
+
+    if (tooltip && svgContainer) {
+      pointGroups.forEach(group => {
+        group.addEventListener('mouseenter', function() {
+          const val = group.getAttribute('data-val');
+          const posX = parseFloat(group.getAttribute('data-x'));
+          const posY = parseFloat(group.getAttribute('data-y'));
+          const containerWidth = svgContainer.clientWidth;
+          const containerHeight = svgContainer.clientHeight;
+
+          const pxX = (posX / 500) * containerWidth;
+          const pxY = (posY / 160) * containerHeight;
+
+          tooltip.textContent = val;
+          tooltip.style.left = `${pxX}px`;
+          tooltip.style.top = `${pxY - 8}px`;
+          tooltip.classList.remove('opacity-0');
+          tooltip.classList.add('opacity-100');
+        });
+
+        group.addEventListener('mouseleave', function() {
+          tooltip.classList.add('opacity-0');
+          tooltip.classList.remove('opacity-100');
+        });
+      });
+    }
+
+    // 6. Scroll Elevation for Presentation Section
+    let ticking = false;
+    function onScroll() {
+      if (prefersReducedMotion || !chartCard || !presentationSection) return;
+      const rect = presentationSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height * 0.5), 0), 1);
+        const shadowAlpha = 0.08 + 0.08 * progress;
+        const shadowSpread = 12 + 16 * progress;
+        chartCard.style.boxShadow = `0 ${shadowSpread}px 40px -4px rgba(42, 23, 15, ${shadowAlpha})`;
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    onScroll();
+  })();
+</script>
+</body></html>

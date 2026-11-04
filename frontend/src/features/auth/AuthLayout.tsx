@@ -1,6 +1,7 @@
 import React from 'react';
-import { Sparkles, Users, ShieldCheck } from 'lucide-react';
+import { Users, ShieldCheck } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import logoImg from '../../assets/Logo.webp';
 
 export interface AuthLayoutProps {
   title?: string;
@@ -41,11 +42,13 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
               </div>
 
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-terracotta mb-4">
-                  <Sparkles className="w-6 h-6" />
-                </div>
+                <img
+                  src={logoImg}
+                  alt="Biana Finanças"
+                  className="w-16 h-16 rounded-2xl object-cover shadow-tactile mb-4 border border-[rgba(44,24,16,0.08)]"
+                />
                 <h1 className="text-3xl font-bold text-on-surface tracking-tight">
-                  Harmonia Finanças
+                  Biana Finanças
                 </h1>
                 <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
                   Equilíbrio e tranquilidade para a sua vida financeira e o bem-estar da sua família.
@@ -92,6 +95,21 @@ export const AuthLayout: React.FC<AuthLayoutProps> = ({
           {/* Right Panel: Form (7 cols) */}
           <div className="col-span-12 lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center bg-surface-container-lowest">
             <div className={cn('max-w-md w-full mx-auto', className)}>
+              {/* Mobile branding header */}
+              <div className="lg:hidden flex items-center gap-3 mb-6">
+                <img
+                  src={logoImg}
+                  alt="Biana Finanças"
+                  className="w-10 h-10 rounded-xl object-cover shadow-xs border border-[rgba(44,24,16,0.08)]"
+                />
+                <div>
+                  <h1 className="text-xl font-bold text-on-surface tracking-tight leading-tight">
+                    Biana Finanças
+                  </h1>
+                  <p className="text-xs text-outline font-medium">Finanças Familiares</p>
+                </div>
+              </div>
+
               {(title || subtitle) && (
                 <div className="mb-6 text-left">
                   {title && (

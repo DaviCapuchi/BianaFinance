@@ -1,12 +1,12 @@
-# Design System: Harmonia Finanças (Biana Finance)
+# Design System: Biana Finanças (Biana Finance)
 
-Especificação visual e técnica para o organizador de finanças pessoais **Harmonia Finanças** (Biana Finance), fundamentada nas telas e tokens do Stitch Canvas (`Warm Financial Wellbeing`) e no diagrama de arquitetura de interface (`DesignExcalidraw.md`).
+Especificação visual e técnica para o organizador de finanças pessoais **Biana Finanças** (Biana Finance), fundamentada nas telas e tokens do Stitch Canvas (`Warm Financial Wellbeing`) e no diagrama de arquitetura de interface (`DesignExcalidraw.md`).
 
 ---
 
 ## 1. Visual Theme & Atmosphere
 
-O **Harmonia Finanças** adota o movimento **Contemporary Warm Minimalism com Tactile Organic Softness**. 
+O **Biana Finanças** adota o movimento **Contemporary Warm Minimalism com Tactile Organic Softness**. 
 
 Em contraposição às interfaces bancárias corporativas frias (azuis monocromáticos) ou neons agressivos de fintechs especulativas, a identidade visual é enraizada no bem-estar, na tranquilidade doméstica e no acolhimento emocional. 
 
@@ -85,7 +85,7 @@ Definidos a partir do wireframe `DesignExcalidraw.md` (`entradas`, `saídas`, `s
 
 ### 4.3 Sidebar & User Profile (`DesignExcalidraw.md`)
 - **Navegação Fixa:** Barra lateral vertical em `bg-surface-container-lowest` ou `bg-surface` com separador suave à direita.
-- **Logotipo:** Harmonia Finanças com ícone de logo orgânico da marca.
+- **Logotipo:** Biana Finanças com ícone de logo orgânico da marca.
 - **Itens de Menu:**
   - `grid_view` Dashboard (Ativo com acento Terracota e fundo suave)
   - `sync_alt` Transações
@@ -126,5 +126,5 @@ Diretrizes para síntese de novas telas e componentes via Stitch Canvas (`stitch
 - **Atmosphere Keywords:** `Warm financial wellbeing, contemporary warm minimalism, tactile organic cards, soft cream background, terracotta primary actions, deep forest green balances, warm espresso typography, human-centered personal finance`.
 - **Prompt Patterns:**
   - *"Dashboard financeiro com layout de 12 colunas, 3 cartões de resumo (Saldo Atual, Receitas e Despesas), gráfico de evolução semanal com gradiente botânico e pílula de pico salarial, e anel de despesas por categoria em tons quentes."*
-  - *"Tela de cadastro com cartão centralizado de cantos arredondados (24px), inputs em creme com foco em terracota, logo Harmonia Finanças no topo e copy acolhedor 'Cuidar do seu dinheiro também é cuidar de quem você ama'."*
+  - *"Tela de cadastro com cartão centralizado de cantos arredondados (24px), inputs em creme com foco em terracota, logo Biana Finanças no topo e copy acolhedor 'Cuidar do seu dinheiro também é cuidar de quem você ama'."*
   - *"Lista de transações com cartões brancos táteis, badges em pílulas com porcentagem, valores monetários formatados em Real (R$) e ícones arredondados de 40px em tom caramelo."*

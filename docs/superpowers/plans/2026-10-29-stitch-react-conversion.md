@@ -416,7 +416,7 @@ Expected: FAIL ("Cannot find module ./StatCard")
 
 - [ ] **Step 3: Implementar componentes estruturais e StatCards**
 
-1. `Sidebar.tsx`: Implementa navegação vertical fixa (288px de largura / `w-72`), marca "Harmonia Finanças" com logo, itens com ícones Lucide (`Dashboard`, `Transações`, `Relatórios`, `Metas & Orçamentos`, `Configurações`), estado ativo em terracota suave, e âncora de perfil inferior ("Davi", "Plano Familiar Ativo").
+1. `Sidebar.tsx`: Implementa navegação vertical fixa (288px de largura / `w-72`), marca "Biana Finanças" com logo, itens com ícones Lucide (`Dashboard`, `Transações`, `Relatórios`, `Metas & Orçamentos`, `Configurações`), estado ativo em terracota suave, e âncora de perfil inferior ("Davi", "Plano Familiar Ativo").
 2. `DashboardTopNav.tsx`: Barra superior fixa com suporte responsivo a mobile e desktop, seletor de mês/ano, botão "+ Nova Transação" e avatar.
 3. `DashboardHeader.tsx`: Cabeçalho interno ("Olá, Davi 👋 - Aqui está o resumo da sua saúde financeira este mês"), seletor de período dropdown, botão de exportar e botão principal de nova transação.
 4. `StatCard.tsx`: Cartão com cantos `rounded-2xl`, blur sutil de fundo decorativo em verde ou terracota (sem cor preta), suporte a barra de progresso (Receitas) ou metadados de conta bancária (Saldo Atual) e % comprometida (Despesas).
