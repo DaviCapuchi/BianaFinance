@@ -2,12 +2,16 @@
   "name": "biana-finance",
   "private": true,
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
-    "build": "npm --prefix frontend run build",
-    "test": "npm --prefix frontend test"
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run build",
+    "test:frontend": "npm --prefix frontend test",
+    "test:backend": "npm --prefix backend test"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "fastify": "^5.12.8",
     "lucide-react": "^1.61.0",
     "react-router-dom": "^7.18.4",
     "recharts": "^3.10.1",
