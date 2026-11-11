@@ -1,7 +1,6 @@
 import React from 'react';
 import { Plus, Bell, Search, Menu } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
-import logoImg from '../../assets/Logo.webp';
 
 export interface DashboardTopNavProps {
   periodLabel?: string;
